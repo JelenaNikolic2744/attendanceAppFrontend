@@ -1,0 +1,19 @@
+<div class="container">
+    <div fxLayout="row wrap" fxLayout.xs="column">
+        <div fxFlex="1 1 auto" class="home">
+            <div class="register">
+                <button mat-button class="button registerBtn"
+                    [ngClass]="registered===false ? 'registerBtnColor': 'disabledBtnRegisterColor'"
+                    [disabled]="registered" (click)="register()">REGISTER</button>
+            </div>
+            <div class="cancel">
+                <button mat-button class="button cancelBtn" [disabled]="!registered"
+                    [ngClass]="registered===true ? 'cancelBtnColor': 'disabledBtnCancelColor'"
+                    (click)="cancel()">CANCEL</button>
+            </div>
+            <div class="attendance">
+                <button mat-button class="button attendanceBtn" (click)="viewAttendance()">VIEW ATTENDANCE</button>
+            </div>
+        </div>
+    </div>
+</div>

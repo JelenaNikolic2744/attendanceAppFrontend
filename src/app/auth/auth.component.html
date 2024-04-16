@@ -1,0 +1,33 @@
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="loginForm" (ngSubmit)="loginForm.valid && onSubmit(loginForm)">
+      <mat-error *ngIf="authFailed" class="error">
+        The email and password were not recognized
+      </mat-error>
+      <mat-label>Email *</mat-label>
+      <mat-form-field appearance="outline" class="inputEmail">
+        <input #inputEmail matInput formControlName="email" required>
+        <mat-error>
+          Please provide a valid email
+        </mat-error>
+      </mat-form-field>
+      <mat-label *ngIf="!forgotPasswordPrim">Password *</mat-label>
+      <mat-form-field *ngIf="!forgotPasswordPrim else elseBlock" appearance="outline" class="inputPassword">
+        <input #inputPassword matInput type="password" formControlName="password" required>
+        <mat-error>
+          Please provide a valid password
+        </mat-error>
+      </mat-form-field>
+      <ng-template #elseBlock >
+        <p class="emailText"> Please provide email address and email will be sent with further instractions for password
+          change.</p>
+      </ng-template>
+      <div style="text-align: right; margin-bottom:20px;">
+        <button class="hrefButton" *ngIf="!forgotPasswordPrim" (click)="forgotPassword()">Forgot password</button>
+      </div>
+      <div style="text-align: center;">
+        <button class="submitButton" mat-raised-button>{{buttonText}}</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

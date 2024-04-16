@@ -1,0 +1,64 @@
+.home {
+  position: relative;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.register {
+  padding-bottom: 20px;
+}
+
+.cancel {
+  padding-bottom: 20px;
+}
+
+.attendance {
+  padding-top: 90px;
+}
+
+.registerBtn {
+  color: white;
+  font-family: "Inter";
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 21px;
+  height: 51px;
+  width: 260px;
+}
+
+.cancelBtn {
+  color: white;
+  font-family: "Inter";
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 21px;
+  height: 51px;
+  width: 260px;
+}
+
+.attendanceBtn {
+  background-color: rgba(255, 184, 132, 1);
+  color: white;
+  font-family: "Inter";
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 21px;
+  height: 51px;
+  width: 300px;
+}
+
+.cancelBtnColor {
+  background-color: rgba(255, 76, 124, 1);
+}
+
+.disabledBtnCancelColor {
+  background-color: rgba(255, 76, 124, 0.45);
+}
+
+.disabledBtnRegisterColor {
+  background-color: rgba(92, 245, 150, 0.45);
+}
+
+.registerBtnColor {
+  background-color: rgba(92, 245, 150, 1);
+}

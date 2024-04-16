@@ -1,0 +1,11 @@
+.textHeaderHolder{
+    padding-top: 30px;
+    margin-left: 3.5%;
+}
+
+.textHeader{
+    font-family: 'Inter';
+    font-weight: 800;
+    font-size: 32px;
+    color: rgba(25, 52, 145, 1);
+}

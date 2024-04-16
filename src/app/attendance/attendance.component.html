@@ -1,0 +1,33 @@
+<div class="borders">
+    <mat-card class="matContainer">
+        <mat-card class="middleContainer">
+            <mat-card class="followersCard">
+                <mat-card-content>
+                    <div class="dataDiv" *ngFor="let follower of followers; let i = index">
+                        <div class="pDiv">
+                            <p class="textStyle">{{i+1}}. {{follower.name}} {{follower.lastname}}</p>
+                        </div>
+
+                        <div class="iconDiv">
+                            <a (click)="remove(i)"> <img class="iconImg" src="assets/icons/icon.png"></a>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+            <div><button class="showCloseStyle" (click)="openClose()">{{openedClosedText}}</button></div>
+            <mat-card *ngIf="openedClosed" class="employeesCard">
+                <mat-card-content>
+                    <div class="dataDivEmployees" *ngFor="let user of employees; let i =index">
+                        <div class="pDiv">
+                            <p class="textStyle">{{i+1}}. {{user.name}} {{user.lastname}}</p>
+                        </div>
+
+                        <div class="iconDiv">
+                            <a (click)="add(i)"><img class="iconImg" src="assets/icons/icon-add.png"></a>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </mat-card>
+    </mat-card>
+</div>
